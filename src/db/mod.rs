@@ -1,3 +1,5 @@
+pub mod model;
+pub mod queries;
 use sqlx::{PgPool, postgres::PgPoolOptions};
 use crate::config;
 
