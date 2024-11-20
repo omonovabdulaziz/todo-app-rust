@@ -1,0 +1,10 @@
+[package]
+name = "todoapp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
+sqlx = { version = "0.8.2", features = ["postgres", "runtime-tokio-native-tls"] }
+warp = "0.3.7"
+anyhow = "1.0.93"
