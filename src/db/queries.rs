@@ -1,5 +1,5 @@
 use sqlx::PgPool;
-use crate::db::models::Todo;
+use crate::db::model::Todo;
 
 pub async fn get_all_todos(pool: &PgPool) -> Result<Vec<Todo>, sqlx::Error> {
     sqlx::query_as!(

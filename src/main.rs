@@ -1,11 +1,15 @@
+use utoipa_swagger_ui::ApiDoc;
 use warp::Filter;
-
+use swagger::ApiDoc;
+use utoipa_swagger_ui::SwaggerUi;
+mod swagger;
 mod config;
 mod db;
 mod routes;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
+
     dotenvy::dotenv().ok();
 
     let pool = db::connect().await?;
